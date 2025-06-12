@@ -1,42 +1,112 @@
 /* === Global Styles === */
 body {
-  font-family: Arial, sans-serif; /* Clean, readable font */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4; /* Light gray background for contrast */
-  color: #333;         /* Default text color */
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* === Header Styles === */
 header {
   background: #e6f4ea;
   color: #2e5939;
-  padding: 1em;
+  padding: 1.5em 0;
   text-align: center;
 }
 
-/* Navigation bar links inside the header */
 nav a {
   margin: 0 15px;
   color: #2e5939;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* === Main Content Area === */
 main {
-  padding: 2em; /* Adds breathing room around main content */
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 2em;
 }
 
-/* Section spacing for homepage intro and project preview */
-.intro, .projects-preview {
+.hero {
+  background: linear-gradient(to right, #e6f4ea, #cde8d1);
+  padding: 4em 2em;
+  text-align: center;
+  border-radius: 12px;
   margin-bottom: 2em;
 }
 
-/* === Footer Styles === */
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #2e5939;
+}
+
+.hero p {
+  font-size: 1.25em;
+  color: #444;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background-color: #2e5939;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1b3e28;
+}
+
+main section {
+  background: #fff;
+  margin-bottom: 2em;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  color: #2e5939;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #94d2bd;
+  padding-bottom: 0.3em;
+}
+
+main ul {
+  list-style-type: disc;
+  padding-left: 1.2em;
+}
+
+main li {
+  margin-bottom: 0.75em;
+}
+
+.resume a {
+  color: #2e5939;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.resume a:hover {
+  text-decoration: underline;
+  color: #0055aa;
+}
+
 footer {
   background: #e6f4ea;
   color: #2e5939;
@@ -45,7 +115,6 @@ footer {
   font-size: 1.1em;
 }
 
-/* Footer links styling */
 footer a {
   color: #2e5939;
   text-decoration: none;
@@ -54,5 +123,15 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-  color: #0055aa;       /* Brighter blue on hover */
+  color: #0055aa;
+}
+
+.profile-pic {
+  float: right;
+  margin-left: 2em;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
