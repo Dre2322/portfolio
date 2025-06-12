@@ -1,0 +1,58 @@
+/* === Global Styles === */
+body {
+  font-family: Arial, sans-serif; /* Clean, readable font */
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; /* Light gray background for contrast */
+  color: #333;         /* Default text color */
+}
+
+/* === Header Styles === */
+header {
+  background: #e6f4ea;
+  color: #2e5939;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Navigation bar links inside the header */
+nav a {
+  margin: 0 15px;
+  color: #2e5939;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Main Content Area === */
+main {
+  padding: 2em; /* Adds breathing room around main content */
+}
+
+/* Section spacing for homepage intro and project preview */
+.intro, .projects-preview {
+  margin-bottom: 2em;
+}
+
+/* === Footer Styles === */
+footer {
+  background: #e6f4ea;
+  color: #2e5939;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.1em;
+}
+
+/* Footer links styling */
+footer a {
+  color: #2e5939;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #0055aa;       /* Brighter blue on hover */
+}
