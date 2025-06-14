@@ -135,3 +135,49 @@ footer a:hover {
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.skill-category {
+  flex: 1 1 200px;
+  background-color: #ffffff;
+  border: 2px solid #2e5939;
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+  color: #2e5939;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: #2e5939;
+  color: #fff;
+  padding: 0.4em 0.8em;
+  border-radius: 20px;
+  margin: 0.2em;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+  background-color: #1b3e28;
+}
