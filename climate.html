@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 1 | Climate Trends Analysis</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) library for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- === Header section with navigation === -->
+  <header>
+    <nav>
+      <!-- Main nav links -->
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <!-- Dropdown menu for project pages -->
+      <div class="dropdown">
+        <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="climate.html">Climate Trends Analysis</a>
+          <a href="sentiment.html">Movie Review Sentiment</a>
+          <a href="readmission.html">Hospital Readmission Risk</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- === Main content area === -->
+  <main>
+    <!-- Hero banner section -->
+    <section class="hero" data-aos="fade-down">
+      <h1>Tracking the Planet’s Pulse</h1>
+      <p>Analyzing CO₂, Global Temperature Anomalies, and Sea Level Rise</p>
+    </section>
+
+    <!-- Hypothesis introduction section -->
+    <section data-aos="fade-right">
+      <h2>Introduction & Hypothesis</h2>
+      <p>Climate change is among the most pressing issues of our time. Our hypothesis: if atmospheric CO₂ continues to rise, global temperature anomalies and sea level will also show sustained upward trends.</p>
+    </section>
+
+    <!-- Dataset sources and methodology -->
+    <section data-aos="fade-left">
+      <h2>Data Sources & Methods</h2>
+      <ul>
+        <li>CO₂: Mauna Loa Observatory (1958–Present)</li>
+        <li>Temperature: NASA GISTEMP v4 (1880–Present)</li>
+        <li>Sea Level: NOAA JPL RECON (1900–2018)</li>
+      </ul>
+      <p>Methods include merging monthly time-series, computing 10‑year rolling averages, correlation matrices, and regression modeling using Python (Pandas, Matplotlib, Seaborn).</p>
+    </section>
+
+    <!-- Main results from data analysis -->
+    <section data-aos="fade-up">
+      <h2>Key Results</h2>
+      <ul>
+        <li>CO₂ rising at <strong>+1.67 ppm / year</strong></li>
+        <li>Temperature anomalies rising at <strong>+0.0123 °C / year</strong></li>
+        <li>Sea level rising at <strong>+0.70 mm / year</strong></li>
+        <li>Strong lagged correlation (1‑month) between CO₂ and temperature (r ≈ 0.803)</li>
+      </ul>
+    </section>
+
+    <!-- Overview of regression and predictive analysis -->
+    <section data-aos="fade-up">
+      <h2>Predictive Modeling</h2>
+      <p>Regression model highlights CO₂ as the dominant predictor. Training R² = 0.48, but negative test R² suggests potential overfitting. Future work will refine model complexity and consider additional climate features.</p>
+    </section>
+
+    <!-- Ethical considerations and study limitations -->
+    <section data-aos="fade-up">
+      <h2>Ethics & Limitations</h2>
+      <p>We aim for responsible communication—avoiding alarmism, acknowledging dataset uncertainty, and emphasizing reproducibility. Transparency and interpretability remain key goals in future iterations.</p>
+    </section>
+
+    <!-- Links to downloadable project artifacts -->
+    <section data-aos="zoom-in" class="resume">
+      <h2>Downloadables</h2>
+      <p>
+        <a href="sprint1/DSC450_Week4_P1_M3 (1).pptx" target="_blank">
+          <i class="fas fa-file-powerpoint"></i> Project Presentation (PPTX)
+        </a><br>
+        <a href="sprint1/Climate_Report (Final).docx" target="_blank">
+          <i class="fas fa-file-word"></i> Full Report (DOCX)
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <!-- === Footer with contact icons === -->
+  <footer>
+    <p>
+      📫 <strong>Contact:</strong>
+      <a href="mailto:2dre34@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/Dre2322" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- AOS script for initializing scroll animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

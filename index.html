@@ -4,26 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andres Melendez | Portfolio</title>
+
+  <!-- Link to external CSS for styling -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Header section with navigation -->
   <header>
     <nav>
+      <!-- Main navigation links -->
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+
+      <!-- Dropdown menu for project selections -->
+      <div class="dropdown">
+        <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="climate.html">Climate Trends Analysis</a>
+          <a href="sentiment.html">Movie Review Sentiment</a>
+          <a href="readmission.html">Hospital Readmission Risk</a>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- Main content section -->
   <main>
+    <!-- Hero banner with intro -->
     <section class="hero" data-aos="fade-down">
       <h1>Hi, I'm Andres Melendez</h1>
       <p>Data Science & Software Development Student | Builder of Practical, People-Centered Solutions</p>
       <a href="about.html" class="button">Learn More About Me</a>
     </section>
 
+    <!-- Preview of key projects -->
     <section class="projects-preview" data-aos="fade-up">
       <h2>Featured Projects</h2>
       <ul>
@@ -34,9 +54,10 @@
     </section>
   </main>
 
+  <!-- Footer with contact information and links -->
   <footer>
     <p>
-      📫 <strong>Contact:</strong>
+      📩 <strong>Contact:</strong>
       <a href="mailto:2dre34@gmail.com"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://github.com/Dre2322" target="_blank"><i class="fab fa-github"></i> GitHub</a>
       <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -44,6 +65,7 @@
     </p>
   </footer>
 
+  <!-- Script for AOS initialization -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 </body>
