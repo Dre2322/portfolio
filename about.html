@@ -4,30 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Andres Melendez</title>
+
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Load Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Load AOS (Animate On Scroll) library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Header section containing navigation menu -->
   <header>
     <nav>
+      <!-- Basic page links -->
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+
+      <!-- Dropdown for navigating between multiple project pages -->
+      <div class="dropdown">
+        <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="climate.html">Climate Trends Analysis</a>
+          <a href="sentiment.html">Movie Review Sentiment</a>
+          <a href="readmission.html">Hospital Readmission Risk</a>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- Main page content -->
   <main>
+    <!-- Introduction section with profile image and biography -->
     <section class="intro" data-aos="fade-right">
-      <img src="andres.jpg" alt="Andres Melendez" class="profile-pic">
+      <img src="image/andres.jpg" alt="Andres Melendez" class="profile-pic">
       <h2>About Me</h2>
       <p>I’m Andres Melendez, a Data Science and Software Development student based in Texas. I bring hands-on experience in web development, predictive modeling, and team leadership from a career transition that included retail, logistics, and tech roles. I’m passionate about building meaningful, user-centered applications that solve real problems.</p>
     </section>
 
-    <!-- === Updated Skills Section === -->
+    <!-- Skills grouped by category -->
     <section class="skills" data-aos="fade-left">
       <h2>Technical Skills</h2>
       <div class="skills-grid">
+        <!-- Programming languages -->
         <div class="skill-category">
           <h3>Programming Languages</h3>
           <span class="skill-badge">Java</span>
@@ -37,6 +57,8 @@
           <span class="skill-badge">JavaScript</span>
           <span class="skill-badge">SQL</span>
         </div>
+
+        <!-- Frameworks and tools -->
         <div class="skill-category">
           <h3>Frameworks & Tools</h3>
           <span class="skill-badge">JSP</span>
@@ -47,6 +69,8 @@
           <span class="skill-badge">Eclipse</span>
           <span class="skill-badge">FPDF</span>
         </div>
+
+        <!-- Data science stack -->
         <div class="skill-category">
           <h3>Data Science</h3>
           <span class="skill-badge">Pandas</span>
@@ -55,11 +79,15 @@
           <span class="skill-badge">EDA</span>
           <span class="skill-badge">Predictive Modeling</span>
         </div>
+
+        <!-- Web dev fundamentals -->
         <div class="skill-category">
           <h3>Web Development</h3>
           <span class="skill-badge">Responsive Design</span>
           <span class="skill-badge">Client/Server Integration</span>
         </div>
+
+        <!-- Project and team management tools -->
         <div class="skill-category">
           <h3>Project Management</h3>
           <span class="skill-badge">Agile</span>
@@ -68,6 +96,7 @@
       </div>
     </section>
 
+    <!-- Work history overview -->
     <section class="experience" data-aos="fade-up">
       <h2>Professional Experience</h2>
       <ul>
@@ -77,18 +106,21 @@
       </ul>
     </section>
 
+    <!-- Academic background -->
     <section class="education" data-aos="fade-up">
       <h2>Education</h2>
       <p><strong>B.S. Data Science & Software Development</strong> – Bellevue University (In Progress, 2026)</p>
       <p><strong>High School Diploma</strong> – Flatonia High School, 2012</p>
     </section>
 
+    <!-- Resume download section -->
     <section class="resume" data-aos="zoom-in">
       <h2>Resume</h2>
       <p>Download my resume here: <a href="Resume2025.pdf" target="_blank">Resume (PDF)</a></p>
     </section>
   </main>
 
+  <!-- Footer with social/contact links -->
   <footer>
     <p>
       📫 <strong>Contact:</strong>
@@ -99,6 +131,7 @@
     </p>
   </footer>
 
+  <!-- AOS (Animate On Scroll) initialization script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 </body>

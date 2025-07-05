@@ -1,13 +1,14 @@
 /* === Global Styles === */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Sets the global font */
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: #f4f4f4; /* Light gray background */
   color: #333;
   line-height: 1.6;
 }
 
+/* === Header Styles === */
 header {
   background: #e6f4ea;
   color: #2e5939;
@@ -15,29 +16,76 @@ header {
   text-align: center;
 }
 
-nav a {
-  margin: 0 15px;
+/* === Navigation Styles === */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+nav a, .dropbtn {
   color: #2e5939;
   text-decoration: none;
   font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
 }
 
-nav a:hover {
+nav a:hover, .dropbtn:hover {
   text-decoration: underline;
 }
 
+/* === Dropdown Styles === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #2e5939;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #e6f4ea;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* === Main Content Area === */
 main {
   max-width: 1000px;
   margin: 2em auto;
   padding: 0 2em;
 }
 
+/* === Hero Section === */
 .hero {
   background: linear-gradient(to right, #e6f4ea, #cde8d1);
   padding: 4em 2em;
   text-align: center;
   border-radius: 12px;
   margin-bottom: 2em;
+  animation: fadeInDown 1s ease-in-out;
 }
 
 .hero h1 {
@@ -51,6 +99,7 @@ main {
   color: #444;
 }
 
+/* === Button Styles === */
 .button {
   display: inline-block;
   margin-top: 1em;
@@ -66,6 +115,7 @@ main {
   background-color: #1b3e28;
 }
 
+/* === Section Styles === */
 main section {
   background: #fff;
   margin-bottom: 2em;
@@ -73,6 +123,7 @@ main section {
   border-radius: 12px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
 }
 
 main section:hover {
@@ -96,6 +147,7 @@ main li {
   margin-bottom: 0.75em;
 }
 
+/* === Resume Link Styling === */
 .resume a {
   color: #2e5939;
   font-weight: bold;
@@ -107,6 +159,7 @@ main li {
   color: #0055aa;
 }
 
+/* === Footer Styles === */
 footer {
   background: #e6f4ea;
   color: #2e5939;
@@ -126,6 +179,7 @@ footer a:hover {
   color: #0055aa;
 }
 
+/* === Profile Image Styling === */
 .profile-pic {
   float: right;
   margin-left: 2em;
@@ -136,6 +190,7 @@ footer a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* === Skills Section Grid Layout === */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -144,6 +199,7 @@ footer a:hover {
   margin-top: 1em;
 }
 
+/* === Individual Skill Card === */
 .skill-category {
   flex: 1 1 200px;
   background-color: #ffffff;
@@ -165,6 +221,7 @@ footer a:hover {
   margin-bottom: 0.5em;
 }
 
+/* === Skill Badge Styling === */
 .skill-badge {
   display: inline-block;
   background-color: #2e5939;
@@ -180,4 +237,54 @@ footer a:hover {
 .skill-badge:hover {
   transform: scale(1.1);
   background-color: #1b3e28;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .profile-pic {
+    float: none;
+    display: block;
+    margin: 0 auto 1em;
+  }
 }
