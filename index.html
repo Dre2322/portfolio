@@ -15,20 +15,21 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header section with navigation -->
+  <!-- Header section containing navigation menu -->
   <header>
     <nav>
-      <!-- Main navigation links -->
+      <!-- Basic page links -->
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
 
-      <!-- Dropdown menu for project selections -->
+      <!-- Dropdown for navigating between multiple project pages -->
       <div class="dropdown">
         <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
           <a href="climate.html">Climate Trends Analysis</a>
-          <a href="sentiment.html">Movie Review Sentiment</a>
+          <a href="sentiment.html">IMDb Sentiment Analysis</a>
           <a href="readmission.html">Hospital Readmission Risk</a>
+          <a href="moffatbay.html">Moffat Bay Lodge Website</a>
         </div>
       </div>
     </nav>
@@ -47,9 +48,26 @@
     <section class="projects-preview" data-aos="fade-up">
       <h2>Featured Projects</h2>
       <ul>
-        <li><strong>Analyzing Climate Trends Using NASA Earth Data:</strong> Long-term analysis of global temperature, CO₂, and sea level patterns. <a href="#">GitHub</a></li>
-        <li><strong>Sentiment Analysis on Movie Reviews:</strong> Classifies IMDB reviews with NLP into positive, neutral, or negative. <a href="#">GitHub</a></li>
-        <li><strong>Predicting Hospital Readmission Risk:</strong> ML model forecasts 30-day readmission using synthetic patient data. <a href="#">GitHub</a></li>
+        <li>
+          <strong>Analyzing Climate Trends Using NASA Earth Data:</strong>
+          Long-term analysis of global temperature, CO₂, and sea level patterns.
+          <a href="climate.html">View Project</a>
+        </li>
+        <li>
+          <strong>Sentiment Analysis on Movie Reviews:</strong>
+          Classifies IMDb reviews with NLP into positive or negative.
+          <a href="sentiment.html">View Project</a>
+        </li>
+        <li>
+          <strong>Predicting Hospital Readmission Risk:</strong>
+          ML model forecasts 30-day readmission using synthetic patient data.
+          <a href="readmission.html">View Project</a>
+        </li>
+        <li>
+          <strong>Moffat Bay Lodge Website:</strong>
+          A full-stack web application with registration, login, and a reservation system.
+          <a href="moffatbay.html">View Project</a>
+        </li>
       </ul>
     </section>
   </main>
