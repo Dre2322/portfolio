@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 4 | Moffat Bay Lodge Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== HEADER with dropdown navigation ===== -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="climate.html">Climate Trends Analysis</a>
+          <a href="sentiment.html">IMDb Sentiment Analysis</a>
+          <a href="readmission.html">Hospital Readmission Risk</a>
+          <a href="moffatbay.html">Moffat Bay Lodge Website</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- HERO section -->
+    <section class="hero" data-aos="fade-down">
+      <h1>🏕️ Moffat Bay Lodge Website</h1>
+      <p>A full-stack reservation system with authentication, responsive design, and database integration.</p>
+    </section>
+
+    <!-- PROJECT OVERVIEW -->
+    <section data-aos="fade-right">
+      <h2>Project Overview</h2>
+      <p>
+        This team project delivers a complete website for the fictional Moffat Bay Lodge.  
+        Visitors can explore attractions, register and log in, make reservations, and look up past bookings.  
+        All reservations and user accounts are stored securely in a MySQL database with Java-based backend services running on Tomcat.
+      </p>
+    </section>
+
+    <!-- FEATURES -->
+    <section data-aos="fade-left">
+      <h2>Key Features</h2>
+      <ul>
+        <li>✅ **Landing Page:** marketing-focused entry point</li>
+        <li>✅ **About & Contact Pages:** combined for clarity</li>
+        <li>✅ **Attractions Page:** carousel image display</li>
+        <li>✅ **Authentication:** registration & login with validation & password hashing</li>
+        <li>✅ **Reservation System:** choose room type, dates, guests, and confirm booking</li>
+        <li>✅ **Reservation Lookup:** search past reservations by ID or email</li>
+      </ul>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section data-aos="fade-up">
+      <h2>Technologies Used</h2>
+      <p>
+        <strong>Frontend:</strong> HTML5, CSS3, JavaScript  
+        <strong>Backend:</strong> Java Servlets, JSP on Apache Tomcat  
+        <strong>Database:</strong> MySQL  
+        <strong>Security:</strong> Regex validation, password hashing, session management
+      </p>
+    </section>
+
+    <!-- MY ROLE -->
+    <section data-aos="fade-up">
+      <h2>My Role</h2>
+      <p>
+        I served as <strong>Team Lead</strong>, contributing to planning, servlet development, database design, and testing.  
+        I coordinated GitHub workflows, implemented reservation logic, and documented our progress.
+      </p>
+    </section>
+
+    <!-- DOWNLOADABLE FILES -->
+    <section class="resume" data-aos="zoom-in">
+      <h2>Downloadables</h2>
+      <p>
+        <a href="mbay/AlphaTeam-MoffatBayPresentation.pptx" target="_blank"><i class="fas fa-file-powerpoint"></i> Project Presentation (PPTX)</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      📫 <strong>Contact:</strong>
+      <a href="mailto:2dre34@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/Dre2322" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
