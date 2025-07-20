@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 2 | IMDb Sentiment Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header section containing navigation menu -->
+  <header>
+    <nav>
+      <!-- Basic page links -->
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <!-- Dropdown for navigating between multiple project pages -->
+      <div class="dropdown">
+        <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="climate.html">Climate Trends Analysis</a>
+          <a href="sentiment.html">Movie Review Sentiment</a>
+          <a href="readmission.html">Hospital Readmission Risk</a>
+          <a href="moffatbay.html">Moffat Bay Lodge Website</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero" data-aos="fade-down">
+      <h1>IMDb Sentiment Analysis</h1>
+      <p>Classifying movie reviews as positive or negative using NLP & Machine Learning</p>
+    </section>
+
+    <!-- Problem & Hypothesis -->
+    <section data-aos="fade-right">
+      <h2>Business Problem / Hypothesis</h2>
+      <p>Can we classify IMDb movie reviews as positive or negative with accuracy above 85%? Accurate sentiment classification helps media companies, streaming services, and marketers turn raw reviews into actionable insights.</p>
+    </section>
+
+    <!-- Methodology -->
+    <section data-aos="fade-left">
+      <h2>Methodology</h2>
+      <ul>
+        <li><strong>Data:</strong> IMDb Dataset of 50,000 reviews from Kaggle</li>
+        <li><strong>Cleaning:</strong> Removed HTML tags, special characters, stopwords, standardized case</li>
+        <li><strong>Feature Engineering:</strong> TF‑IDF vectorization and sentiment label encoding</li>
+        <li><strong>Models:</strong> Logistic Regression, Random Forest, DistilBERT</li>
+        <li><strong>Evaluation:</strong> Accuracy, Precision, Recall, F1‑Score, Confusion Matrices, ROC</li>
+      </ul>
+    </section>
+
+    <!-- Results -->
+    <section data-aos="fade-up">
+      <h2>Results</h2>
+      <ul>
+        <li>✅ <strong>DistilBERT:</strong> 91% Accuracy – Best performance capturing nuance and context</li>
+        <li>✅ <strong>Logistic Regression:</strong> 88% Accuracy, AUC 0.96 – Strong lightweight baseline</li>
+        <li>✅ <strong>Random Forest:</strong> 84% Accuracy – Needed more tuning for sparse TF‑IDF features</li>
+      </ul>
+      <p>Visualizations like word clouds, ROC curves, and confusion matrices highlighted how each model handled classification and error types.</p>
+    </section>
+
+    <!-- Conclusion -->
+    <section data-aos="fade-up">
+      <h2>Conclusion</h2>
+      <p>The hypothesis was confirmed! Transformer-based architectures like DistilBERT excel at nuanced sentiment analysis, while classical ML models provide efficient alternatives.</p>
+    </section>
+
+    <!-- Downloads -->
+    <section data-aos="zoom-in" class="resume">
+      <h2>Downloadables</h2>
+      <p>
+        <a href="sprint2/IMDB_Sentiment_Analysis_Report.docx" target="_blank"><i class="fas fa-file-word"></i> Full Report (DOCX)</a> |
+        <a href="sprint2/IMDB_Sentiment_Presentation.pptx" target="_blank"><i class="fas fa-file-powerpoint"></i> Presentation (PPTX)</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      📫 <strong>Contact:</strong>
+      <a href="mailto:2dre34@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/Dre2322" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
