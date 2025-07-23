@@ -1,14 +1,20 @@
-/* === Global Styles === */
+/* ============================
+   GLOBAL STYLES
+   Applies base font, colors, and spacing to the whole site
+============================ */
 body {
-  font-family: Arial, sans-serif; /* Sets the global font */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4; /* Light gray background */
+  background: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
-/* === Header Styles === */
+/* ============================
+   HEADER AND NAVIGATION
+   Top header with navigation and dropdown
+============================ */
 header {
   background: #e6f4ea;
   color: #2e5939;
@@ -16,7 +22,6 @@ header {
   text-align: center;
 }
 
-/* === Navigation Styles === */
 nav {
   display: flex;
   justify-content: center;
@@ -25,7 +30,8 @@ nav {
   gap: 1em;
 }
 
-nav a, .dropbtn {
+nav a,
+.dropbtn {
   color: #2e5939;
   text-decoration: none;
   font-weight: bold;
@@ -35,26 +41,25 @@ nav a, .dropbtn {
   cursor: pointer;
 }
 
-nav a:hover, .dropbtn:hover {
+nav a:hover,
+.dropbtn:hover {
   text-decoration: underline;
 }
 
-/* === Dropdown Styles === */
+/* Dropdown menu styling */
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #fff;
   min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   z-index: 1;
 }
-
 .dropdown-content a {
   color: #2e5939;
   padding: 10px 15px;
@@ -62,23 +67,23 @@ nav a:hover, .dropbtn:hover {
   display: block;
   font-weight: normal;
 }
-
 .dropdown-content a:hover {
   background-color: #e6f4ea;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* === Main Content Area === */
+/* ============================
+   MAIN CONTENT AREA
+============================ */
 main {
   max-width: 1000px;
   margin: 2em auto;
   padding: 0 2em;
 }
 
-/* === Hero Section === */
+/* Hero banner */
 .hero {
   background: linear-gradient(to right, #e6f4ea, #cde8d1);
   padding: 4em 2em;
@@ -87,19 +92,17 @@ main {
   margin-bottom: 2em;
   animation: fadeInDown 1s ease-in-out;
 }
-
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
   color: #2e5939;
 }
-
 .hero p {
   font-size: 1.25em;
   color: #444;
 }
 
-/* === Button Styles === */
+/* Buttons */
 .button {
   display: inline-block;
   margin-top: 1em;
@@ -110,12 +113,11 @@ main {
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
-
 .button:hover {
   background-color: #1b3e28;
 }
 
-/* === Section Styles === */
+/* General section styling */
 main section {
   background: #fff;
   margin-bottom: 2em;
@@ -125,41 +127,40 @@ main section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 1s ease forwards;
 }
-
 main section:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-
 main h2 {
   color: #2e5939;
   margin-bottom: 1em;
   border-bottom: 2px solid #94d2bd;
   padding-bottom: 0.3em;
 }
-
 main ul {
   list-style-type: disc;
   padding-left: 1.2em;
 }
-
 main li {
   margin-bottom: 0.75em;
 }
 
-/* === Resume Link Styling === */
+/* ============================
+   RESUME LINK
+============================ */
 .resume a {
   color: #2e5939;
   font-weight: bold;
   text-decoration: none;
 }
-
 .resume a:hover {
   text-decoration: underline;
   color: #0055aa;
 }
 
-/* === Footer Styles === */
+/* ============================
+   FOOTER
+============================ */
 footer {
   background: #e6f4ea;
   color: #2e5939;
@@ -167,19 +168,19 @@ footer {
   padding: 1em;
   font-size: 1.1em;
 }
-
 footer a {
   color: #2e5939;
   text-decoration: none;
   margin: 0 10px;
 }
-
 footer a:hover {
   text-decoration: underline;
   color: #0055aa;
 }
 
-/* === Profile Image Styling === */
+/* ============================
+   PROFILE IMAGE
+============================ */
 .profile-pic {
   float: right;
   margin-left: 2em;
@@ -190,7 +191,9 @@ footer a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === Skills Section Grid Layout === */
+/* ============================
+   SKILLS GRID
+============================ */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -198,8 +201,6 @@ footer a:hover {
   justify-content: space-between;
   margin-top: 1em;
 }
-
-/* === Individual Skill Card === */
 .skill-category {
   flex: 1 1 200px;
   background-color: #ffffff;
@@ -209,19 +210,15 @@ footer a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .skill-category:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-
 .skill-category h3 {
   color: #2e5939;
   font-size: 1.1em;
   margin-bottom: 0.5em;
 }
-
-/* === Skill Badge Styling === */
 .skill-badge {
   display: inline-block;
   background-color: #2e5939;
@@ -233,13 +230,102 @@ footer a:hover {
   font-weight: 500;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .skill-badge:hover {
   transform: scale(1.1);
   background-color: #1b3e28;
 }
 
-/* === Animations === */
+/* ============================
+   KEY FEATURES LIST
+============================ */
+.key-features h2 {
+  color: #2e5939;
+  font-size: 1.8em;
+  border-bottom: 2px solid #94d2bd;
+  padding-bottom: 0.4em;
+  margin-bottom: 1em;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.feature-list li {
+  font-size: 1.1em;
+  margin-bottom: 0.75em;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  line-height: 1.5;
+}
+.feature-list li i {
+  color: #2e5939;
+  font-size: 1.3em;
+  margin-top: 2px;
+}
+
+/* ============================
+   TECHNOLOGIES USED (UPDATED)
+   Matches your screenshot with cards and badges
+============================ */
+.technologies-used h2 {
+  color: #2e5939;
+  font-size: 1.8em;
+  border-bottom: 2px solid #94d2bd;
+  padding-bottom: 0.4em;
+  margin-bottom: 1.5em;
+}
+
+/* Flex layout for tech cards */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: flex-start;
+}
+
+/* Individual tech card */
+.tech-card {
+  flex: 1 1 220px;
+  border: 2px solid #2e5939;
+  border-radius: 10px;
+  padding: 1em;
+  min-width: 220px;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.tech-card h3 {
+  color: #2e5939;
+  font-size: 1.1em;
+  margin-bottom: 0.8em;
+  font-weight: bold;
+}
+
+/* Tech badges */
+.tech-badge {
+  display: inline-block;
+  background-color: #2e5939;
+  color: #fff;
+  padding: 0.35em 0.8em;
+  border-radius: 20px;
+  margin: 0.3em;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.tech-badge:hover {
+  background-color: #1b3e28;
+  transform: scale(1.05);
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -250,7 +336,6 @@ footer a:hover {
     transform: translateY(0);
   }
 }
-
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -262,26 +347,27 @@ footer a:hover {
   }
 }
 
-/* === Responsive Design === */
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: 0.5em;
   }
-
   .hero h1 {
     font-size: 1.8em;
   }
-
   .hero p {
     font-size: 1em;
   }
-
   .skills-grid {
     flex-direction: column;
     gap: 1em;
   }
-
+  .tech-grid {
+    flex-direction: column;
+  }
   .profile-pic {
     float: none;
     display: block;
