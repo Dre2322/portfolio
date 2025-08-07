@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ============================
+       META & STYLESHEETS
+  ============================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Project 1 | Climate Trends Analysis</title>
@@ -11,18 +14,22 @@
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- AOS (Animate On Scroll) library for scroll animations -->
+  <!-- AOS (Animate On Scroll) library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header section containing navigation menu -->
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" id="darkModeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- ============================
+       HEADER & NAVIGATION BAR
+  ============================ -->
   <header>
     <nav>
-      <!-- Basic page links -->
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-
-      <!-- Dropdown for navigating between multiple project pages -->
       <div class="dropdown">
         <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -35,32 +42,42 @@
     </nav>
   </header>
 
-  <!-- === Main content area === -->
+  <!-- ============================
+       MAIN CONTENT AREA
+  ============================ -->
   <main>
-    <!-- Hero banner section -->
+
+    <!-- Hero Banner -->
     <section class="hero" data-aos="fade-down">
       <h1>Tracking the Planet’s Pulse</h1>
       <p>Analyzing CO₂, Global Temperature Anomalies, and Sea Level Rise</p>
     </section>
 
-    <!-- Hypothesis introduction section -->
+    <!-- Hypothesis and Objective -->
     <section data-aos="fade-right">
       <h2>Introduction & Hypothesis</h2>
-      <p>Climate change is among the most pressing issues of our time. Our hypothesis: if atmospheric CO₂ continues to rise, global temperature anomalies and sea level will also show sustained upward trends.</p>
+      <p>
+        Climate change is among the most pressing issues of our time. Our hypothesis: 
+        if atmospheric CO₂ continues to rise, global temperature anomalies and sea level 
+        will also show sustained upward trends.
+      </p>
     </section>
 
-    <!-- Dataset sources and methodology -->
+    <!-- Data Sources and Methodology -->
     <section data-aos="fade-left">
       <h2>Data Sources & Methods</h2>
       <ul>
-        <li>CO₂: Mauna Loa Observatory (1958–Present)</li>
-        <li>Temperature: NASA GISTEMP v4 (1880–Present)</li>
-        <li>Sea Level: NOAA JPL RECON (1900–2018)</li>
+        <li><strong>CO₂:</strong> Mauna Loa Observatory (1958–Present)</li>
+        <li><strong>Temperature:</strong> NASA GISTEMP v4 (1880–Present)</li>
+        <li><strong>Sea Level:</strong> NOAA JPL RECON (1900–2018)</li>
       </ul>
-      <p>Methods include merging monthly time-series, computing 10‑year rolling averages, correlation matrices, and regression modeling using Python (Pandas, Matplotlib, Seaborn).</p>
+      <p>
+        We merged monthly time-series data, applied 10‑year rolling averages, correlation matrices, 
+        and regression modeling using Python (Pandas, Matplotlib, Seaborn).
+      </p>
     </section>
 
-    <!-- Main results from data analysis -->
+    <!-- Results & Trends -->
     <section data-aos="fade-up">
       <h2>Key Results</h2>
       <ul>
@@ -71,33 +88,43 @@
       </ul>
     </section>
 
-    <!-- Overview of regression and predictive analysis -->
+    <!-- Predictive Modeling -->
     <section data-aos="fade-up">
       <h2>Predictive Modeling</h2>
-      <p>Regression model highlights CO₂ as the dominant predictor. Training R² = 0.48, but negative test R² suggests potential overfitting. Future work will refine model complexity and consider additional climate features.</p>
-    </section>
-
-    <!-- Ethical considerations and study limitations -->
-    <section data-aos="fade-up">
-      <h2>Ethics & Limitations</h2>
-      <p>We aim for responsible communication—avoiding alarmism, acknowledging dataset uncertainty, and emphasizing reproducibility. Transparency and interpretability remain key goals in future iterations.</p>
-    </section>
-
-    <!-- Links to downloadable project artifacts -->
-    <section data-aos="zoom-in" class="resume">
-      <h2>Downloadables</h2>
       <p>
-        <a href="sprint1/DSC450_Week4_P1_M3.pptx" target="_blank">
-          <i class="fas fa-file-powerpoint"></i> Project Presentation (PPTX)
-        </a><br>
-        <a href="sprint1/Climate_Report.docx" target="_blank">
-          <i class="fas fa-file-word"></i> Full Report (DOCX)
-        </a>
+        Our regression model identifies CO₂ as the dominant predictor of global temperature anomalies. 
+        While the training R² was 0.48, a negative R² on test data indicated overfitting. 
+        Future work will explore more features and better model regularization.
       </p>
     </section>
+
+    <!-- Ethical Considerations -->
+    <section data-aos="fade-up">
+      <h2>Ethics & Limitations</h2>
+      <p>
+        We emphasized transparency and scientific responsibility—avoiding alarmism, 
+        addressing uncertainty, and ensuring that results are reproducible and explainable.
+      </p>
+    </section>
+
+    <!-- Downloadables Section with Buttons -->
+    <section class="resume" data-aos="zoom-in">
+      <h2>Downloadables</h2>
+      <div class="download-buttons">
+        <a href="sprint1/Climate_Report.docx" class="button" target="_blank">
+          Download Report
+        </a>
+        <a href="sprint1/DSC450_Week4_P1_M3.pptx" class="button" target="_blank">
+          Download Slides
+        </a>
+      </div>
+    </section>
+
   </main>
 
-  <!-- === Footer with contact icons === -->
+  <!-- ============================
+       FOOTER
+  ============================ -->
   <footer>
     <p>
       📫 <strong>Contact:</strong>
@@ -107,8 +134,10 @@
     </p>
   </footer>
 
-  <!-- AOS script for initializing scroll animations -->
+  <!-- AOS animation library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script src="darkmode-toggle.js" defer></script>
+
 </body>
 </html>

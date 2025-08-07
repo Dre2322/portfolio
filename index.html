@@ -5,24 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andres Melendez | Portfolio</title>
 
-  <!-- Link to external CSS for styling -->
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- AOS (Animate On Scroll) Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Animate On Scroll (AOS) library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <!-- Header section containing navigation menu -->
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" id="darkModeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header & Navigation -->
   <header>
     <nav>
-      <!-- Basic page links -->
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-
-      <!-- Dropdown for navigating between multiple project pages -->
       <div class="dropdown">
         <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -35,56 +38,67 @@
     </nav>
   </header>
 
-  <!-- Main content section -->
+  <!-- Main Content -->
   <main>
-    <!-- Hero banner with intro -->
+    <!-- Hero Banner -->
     <section class="hero" data-aos="fade-down">
       <h1>Hi, I'm Andres Melendez</h1>
       <p>Data Science & Software Development Student | Builder of Practical, People-Centered Solutions</p>
       <a href="about.html" class="button">Learn More About Me</a>
     </section>
 
-    <!-- Preview of key projects -->
+    <!-- Projects Preview -->
     <section class="projects-preview" data-aos="fade-up">
       <h2>Featured Projects</h2>
-      <ul>
-        <li>
-          <strong>Analyzing Climate Trends Using NASA Earth Data:</strong>
-          Long-term analysis of global temperature, CO₂, and sea level patterns.
-          <a href="climate.html">View Project</a>
-        </li>
-        <li>
-          <strong>Sentiment Analysis on Movie Reviews:</strong>
-          Classifies IMDb reviews with NLP into positive or negative.
-          <a href="sentiment.html">View Project</a>
-        </li>
-        <li>
-          <strong>Predicting Hospital Readmission Risk:</strong>
-          ML model forecasts 30-day readmission using synthetic patient data.
-          <a href="readmission.html">View Project</a>
-        </li>
-        <li>
-          <strong>Moffat Bay Lodge Website:</strong>
-          A full-stack web application with registration, login, and a reservation system.
-          <a href="moffatbay.html">View Project</a>
-        </li>
-      </ul>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>🌍 Climate Trends Analysis</h3>
+          <p>Long-term analysis of global temperature, CO₂, and sea level patterns using NASA Earth data.</p>
+          <a href="climate.html" class="button">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>🎬 IMDb Sentiment Analysis</h3>
+          <p>Classifies IMDb movie reviews as positive or negative using NLP and machine learning models.</p>
+          <a href="sentiment.html" class="button">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>🏥 Hospital Readmission Risk</h3>
+          <p>ML model predicts 30-day readmission using synthetic patient data and engineered risk scores.</p>
+          <a href="readmission.html" class="button">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>🏕️ Moffat Bay Lodge Website</h3>
+          <p>Full-stack web app with login, registration, and reservation system built with Java, MySQL, and JSP.</p>
+          <a href="moffatbay.html" class="button">View Project</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- Footer with contact information and links -->
-  <footer>
-    <p>
-      📩 <strong>Contact:</strong>
-      <a href="mailto:2dre34@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://github.com/Dre2322" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="Resume2025.pdf" target="_blank"><i class="fas fa-file"></i> Resume</a>
-    </p>
+  <!-- Footer -->
+  <footer class="footer">
+    <p><strong>📩 Contact:</strong></p>
+    <div class="footer-links">
+      <a href="mailto:2dre34@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://github.com/Dre2322" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="Resume2025.pdf" target="_blank" aria-label="Resume">
+        <i class="fas fa-file"></i> Resume
+      </a>
+    </div>
   </footer>
 
-  <!-- Script for AOS initialization -->
+
+  <!-- AOS animation library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script src="darkmode-toggle.js" defer></script>
+
 </body>
 </html>

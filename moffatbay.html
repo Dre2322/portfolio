@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for proper rendering and responsiveness -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Project 4 | Moffat Bay Lodge Website</title>
+
+  <!-- External styles and libraries -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Header section containing navigation menu -->
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" id="darkModeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- ==============================
+       HEADER / NAVIGATION
+  ============================== -->
   <header>
     <nav>
-      <!-- Basic page links -->
+      <!-- Direct links to core pages -->
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
 
-      <!-- Dropdown for navigating between multiple project pages -->
+      <!-- Dropdown navigation for projects -->
       <div class="dropdown">
         <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -29,15 +40,18 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- ==============================
+       MAIN CONTENT
+  ============================== -->
   <main>
-    <!-- HERO section -->
+
+    <!-- Hero banner with project name and one-liner -->
     <section class="hero" data-aos="fade-down">
       <h1>Moffat Bay Lodge Website</h1>
       <p>A full-stack reservation system with authentication, responsive design, and database integration.</p>
     </section>
 
-    <!-- PROJECT OVERVIEW -->
+    <!-- Brief summary and purpose of the project -->
     <section data-aos="fade-right">
       <h2>Project Overview</h2>
       <p>
@@ -47,7 +61,7 @@
       </p>
     </section>
 
-    <!-- FEATURES -->
+    <!-- Core features list using styled icons -->
     <section class="key-features" data-aos="fade-up">
       <h2>Key Features</h2>
       <ul class="feature-list">
@@ -60,49 +74,43 @@
       </ul>
     </section>
 
-    <!-- TECHNOLOGIES -->
+    <!-- Technologies Used section formatted as responsive cards -->
     <section class="technologies-used" data-aos="fade-up">
-      <!-- Section heading -->
       <h2>Technologies Used</h2>
-
-      <!-- Grid container for tech cards -->
       <div class="tech-grid">
-
-        <!-- Frontend technologies -->
-        <div class="tech-card">
+        <!-- Frontend Stack -->
+        <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
           <h3>Frontend</h3>
-          <!-- Each span is a badge -->
           <span class="tech-badge">HTML5</span>
           <span class="tech-badge">CSS3</span>
           <span class="tech-badge">JavaScript</span>
         </div>
 
-        <!-- Backend technologies -->
-        <div class="tech-card">
+        <!-- Backend Stack -->
+        <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
           <h3>Backend</h3>
           <span class="tech-badge">Java Servlets</span>
           <span class="tech-badge">JSP</span>
           <span class="tech-badge">Tomcat</span>
         </div>
 
-        <!-- Database technologies -->
-        <div class="tech-card">
+        <!-- Database -->
+        <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
           <h3>Database</h3>
           <span class="tech-badge">MySQL</span>
         </div>
 
-        <!-- Security technologies -->
-        <div class="tech-card">
+        <!-- Security & Sessions -->
+        <div class="tech-card span-3" data-aos="fade-up" data-aos-delay="100">
           <h3>Security</h3>
           <span class="tech-badge">Regex Validation</span>
           <span class="tech-badge">Password Hashing</span>
           <span class="tech-badge">Session Management</span>
         </div>
-
       </div>
     </section>
 
-    <!-- MY ROLE -->
+    <!-- Your role and contribution in the project -->
     <section data-aos="fade-up">
       <h2>My Role</h2>
       <p>
@@ -111,16 +119,29 @@
       </p>
     </section>
 
-    <!-- DOWNLOADABLE FILES -->
+    <!-- VIDEO DEMO -->
+  <section data-aos="fade-up">
+    <h2>Video Demo</h2>
+    <p>Watch a quick walkthrough of the Moffat Bay Lodge Website in action:</p>
+    <video controls width="100%" style="border-radius: 10px; box-shadow: 0 0 12px rgba(0,0,0,0.15);">
+      <source src="mbay/MoffatBay.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+    <!-- Downloadable assets like presentation or reports -->
     <section class="resume" data-aos="zoom-in">
       <h2>Downloadables</h2>
-      <p>
-        <a href="mbay/AlphaTeam-MoffatBayPresentation.pptx" target="_blank"><i class="fas fa-file-powerpoint"></i> Project Presentation (PPTX)</a>
-      </p>
+      <div class="download-buttons">
+        <a href="mbay/AlphaTeam-MoffatBayPresentation.pptx" class="button" target="_blank">Download Slides</a>
+      <div>
     </section>
+
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ==============================
+       FOOTER
+  ============================== -->
   <footer>
     <p>
       📫 <strong>Contact:</strong>
@@ -130,7 +151,10 @@
     </p>
   </footer>
 
+  <!-- AOS animation library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script src="darkmode-toggle.js" defer></script>
+
 </body>
 </html>

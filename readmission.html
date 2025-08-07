@@ -10,13 +10,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" id="darkModeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
   <!-- === Navigation Header === -->
   <header>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
 
-      <!-- Dropdown for Projects -->
       <div class="dropdown">
         <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -31,14 +35,11 @@
 
   <!-- === Main Content === -->
   <main>
+    <section class="hero">
+      <h1>No Second Stay: Predicting 30-Day Hospital Readmissions</h1>
+      <p>Supporting proactive discharge planning with interpretable machine learning</p>
+    </section>
 
-    <!-- === Project Introduction === -->
-  <section class="hero">
-    <h1>No Second Stay: Predicting 30-Day Hospital Readmissions</h1>
-    <p>Supporting proactive discharge planning with interpretable machine learning</p>
-  </section>
-
-    <!-- === Key Features === -->
     <section class="key-features">
       <h2>Key Features</h2>
       <ul class="feature-list">
@@ -49,53 +50,44 @@
       </ul>
     </section>
 
-<!-- ============================
-     TECHNOLOGIES USED SECTION
-     Displays categorized tech cards with badges for clarity and aesthetics
-============================= -->
-<section class="technologies-used">
-  <h2>Technologies Used</h2>
+    <!-- === Technologies Used Section === -->
+  <section class="technologies-used" data-aos="fade-up">
+    <h2>Technologies Used</h2>
+    <div class="tech-grid">
+      <!-- Frontend Technologies -->
+      <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Frontend</h3>
+        <span class="tech-badge">HTML5</span>
+        <span class="tech-badge">CSS3</span>
+        <span class="tech-badge">JavaScript</span>
+      </div>
 
-  <!-- Tech card grid container -->
-  <div class="tech-grid">
+      <!-- Backend Technologies -->
+      <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Backend</h3>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">XGBoost</span>
+        <span class="tech-badge">SHAP</span>
+      </div>
 
-    <!-- Frontend technologies -->
-    <div class="tech-card">
-      <h3>Frontend</h3>
-      <!-- Tech badges for frontend tools -->
-      <span class="tech-badge">HTML5</span>
-      <span class="tech-badge">CSS3</span>
-      <span class="tech-badge">JavaScript</span>
+      <!-- Libraries -->
+      <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Libraries</h3>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">Scikit-learn</span>
+        <span class="tech-badge">Seaborn</span>
+        <span class="tech-badge">Matplotlib</span>
+      </div>
+
+      <!-- Tools -->
+      <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Tools</h3>
+        <span class="tech-badge">Jupyter Notebooks</span>
+      </div>
     </div>
+  </section>
 
-    <!-- Backend technologies -->
-    <div class="tech-card">
-      <h3>Backend</h3>
-      <!-- Tools used to build predictive models -->
-      <span class="tech-badge">Python</span>
-      <span class="tech-badge">XGBoost</span>
-      <span class="tech-badge">SHAP</span>
-    </div>
 
-    <!-- Libraries used for data processing and visualization -->
-    <div class="tech-card">
-      <h3>Libraries</h3>
-      <span class="tech-badge">Pandas</span>
-      <span class="tech-badge">Scikit-learn</span>
-      <span class="tech-badge">Seaborn</span>
-      <span class="tech-badge">Matplotlib</span>
-    </div>
-
-    <!-- Tool used for interactive coding and exploration -->
-    <div class="tech-card">
-      <h3>Tools</h3>
-      <span class="tech-badge">Jupyter Notebooks</span>
-    </div>
-
-  </div> <!-- End .tech-grid -->
-</section>
-
-    <!-- === Visualizations === -->
     <section>
       <h2>Visuals</h2>
       <img src="sprint3/readmission_shap.png" alt="SHAP Summary Plot" style="width:100%; border-radius: 8px; margin-bottom: 1em;">
@@ -103,7 +95,6 @@
       <p style="font-size: 0.9em; color: #666;">Figure: Risk score distribution and SHAP analysis highlight which features most strongly influence readmission predictions.</p>
     </section>
 
-    <!-- === Results & Takeaways === -->
     <section>
       <h2>Outcomes & Insights</h2>
       <ul class="feature-list">
@@ -113,7 +104,6 @@
       </ul>
     </section>
 
-    <!-- === Ethical Considerations === -->
     <section>
       <h2>Recommendations & Ethics</h2>
       <ul class="feature-list">
@@ -123,23 +113,45 @@
       </ul>
     </section>
 
-    <!-- === Downloadables === -->
     <section>
-      <a href="documents/Project 3-Project Draft DSC450.docx" class="button" download>Download Report</a>
-      <a href="documents/Project 3-DSC450.pptx" class="button" download>Download Slides</a>
+      <h2>Downloadables</h2>
+        <a href="documents/Project 3-Project Draft DSC450.docx" class="button" download>Download Report</a>
+        <a href="documents/Project 3-DSC450.pptx" class="button" download>Download Slides</a>
     </section>
-
   </main>
 
-  <!-- === Footer Contact Section === -->
-  <footer>
-    <p>
-      📩 <strong>Contact:</strong>
-      <a href="mailto:2dre34@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://github.com/Dre2322" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="Resume2025.pdf" target="_blank"><i class="fas fa-file"></i> Resume</a>
-    </p>
+  <!-- Footer -->
+  <footer class="footer">
+    <p><strong>📩 Contact:</strong></p>
+    <div class="footer-links">
+      <a href="mailto:2dre34@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://github.com/Dre2322" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="Resume2025.pdf" target="_blank" aria-label="Resume">
+        <i class="fas fa-file"></i> Resume
+      </a>
+    </div>
   </footer>
+
+  <!-- AOS animation library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,         // Animation duration in ms
+      once: false,            // Only animate elements once as they scroll into view
+      offset: 120,           // Trigger point in px
+      easing: 'ease-in-out'  // Smooth animation curve
+    });
+  </script>
+
+  <script src="darkmode-toggle.js" defer></script>
+
 </body>
 </html>

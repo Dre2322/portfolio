@@ -2,6 +2,10 @@
    GLOBAL STYLES
    Applies base font, colors, and spacing to the whole site
 ============================ */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,6 +13,12 @@ body {
   background: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
 /* ============================
@@ -20,6 +30,12 @@ header {
   color: #2e5939;
   padding: 1.5em 0;
   text-align: center;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background: #1e1e1e;
+  color: #ffffff;
 }
 
 nav {
@@ -41,9 +57,24 @@ nav a,
   cursor: pointer;
 }
 
+body.dark-mode nav a,
+body.dark-mode .dropbtn {
+  color: #f0f0f0;
+}
+
 nav a:hover,
-.dropbtn:hover {
+.dropbtn:hover,
+footer a:hover,
+.resume a:hover {
   text-decoration: underline;
+  color: #0055aa;
+}
+
+a:focus,
+.button:focus,
+.dropbtn:focus {
+  outline: 2px solid #94d2bd;
+  outline-offset: 3px;
 }
 
 /* Dropdown menu styling */
@@ -51,6 +82,7 @@ nav a:hover,
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -59,7 +91,22 @@ nav a:hover,
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   z-index: 1;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+body.dark-mode .dropdown-content {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .dropdown-content a {
   color: #2e5939;
   padding: 10px 15px;
@@ -67,15 +114,44 @@ nav a:hover,
   display: block;
   font-weight: normal;
 }
+
+body.dark-mode .dropdown-content a {
+  color: #ffffff;
+}
+
 .dropdown-content a:hover {
   background-color: #e6f4ea;
 }
-.dropdown:hover .dropdown-content {
-  display: block;
+
+body.dark-mode .dropdown-content a:hover {
+  background-color: #333;
+}
+
+/* ============================
+   DARK MODE TOGGLE BUTTON
+============================ */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  background-color: #2e5939;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #1b3e28;
 }
 
 /* ============================
    MAIN CONTENT AREA
+   Wrapper for main content including sections
 ============================ */
 main {
   max-width: 1000px;
@@ -92,14 +168,28 @@ main {
   margin-bottom: 2em;
   animation: fadeInDown 1s ease-in-out;
 }
+
+body.dark-mode .hero {
+  background: linear-gradient(to right, #333, #444);
+}
+
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
   color: #2e5939;
 }
+
+body.dark-mode .hero h1 {
+  color: #ffffff;
+}
+
 .hero p {
   font-size: 1.25em;
   color: #444;
+}
+
+body.dark-mode .hero p {
+  color: #ccc;
 }
 
 /* Buttons */
@@ -113,6 +203,7 @@ main {
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
+
 .button:hover {
   background-color: #1b3e28;
 }
@@ -127,204 +218,110 @@ main section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 1s ease forwards;
 }
+
+body.dark-mode main section {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
 main section:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
 main h2 {
   color: #2e5939;
   margin-bottom: 1em;
   border-bottom: 2px solid #94d2bd;
   padding-bottom: 0.3em;
 }
+
+body.dark-mode main h2 {
+  color: #ffffff;
+  border-bottom-color: #666;
+}
+
 main ul {
   list-style-type: disc;
   padding-left: 1.2em;
 }
+
 main li {
   margin-bottom: 0.75em;
 }
 
 /* ============================
-   RESUME LINK
-============================ */
-.resume a {
-  color: #2e5939;
-  font-weight: bold;
-  text-decoration: none;
-}
-.resume a:hover {
-  text-decoration: underline;
-  color: #0055aa;
-}
-
-/* ============================
-   FOOTER
+   FOOTER STYLING
+   Centered, clean, dark-mode aware
 ============================ */
 footer {
-  background: #e6f4ea;
+  background-color: #e6f4ea;
   color: #2e5939;
+  padding: 1.5em 1em;
   text-align: center;
-  padding: 1em;
-  font-size: 1.1em;
 }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
 footer a {
   color: #2e5939;
   text-decoration: none;
-  margin: 0 10px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
 }
+
+body.dark-mode footer a {
+  color: #ffffff;
+}
+
 footer a:hover {
   text-decoration: underline;
   color: #0055aa;
 }
 
 /* ============================
-   PROFILE IMAGE
+   PRINT STYLES
+   Optimizes layout for print view
 ============================ */
-.profile-pic {
-  float: right;
-  margin-left: 2em;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* ============================
-   SKILLS GRID
-============================ */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: space-between;
-  margin-top: 1em;
-}
-.skill-category {
-  flex: 1 1 200px;
-  background-color: #ffffff;
-  border: 2px solid #2e5939;
-  border-radius: 12px;
-  padding: 1em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-.skill-category h3 {
-  color: #2e5939;
-  font-size: 1.1em;
-  margin-bottom: 0.5em;
-}
-.skill-badge {
-  display: inline-block;
-  background-color: #2e5939;
-  color: #fff;
-  padding: 0.4em 0.8em;
-  border-radius: 20px;
-  margin: 0.2em;
-  font-size: 0.9em;
-  font-weight: 500;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.skill-badge:hover {
-  transform: scale(1.1);
-  background-color: #1b3e28;
-}
-
-/* ============================
-   KEY FEATURES LIST
-============================ */
-.key-features h2 {
-  color: #2e5939;
-  font-size: 1.8em;
-  border-bottom: 2px solid #94d2bd;
-  padding-bottom: 0.4em;
-  margin-bottom: 1em;
-}
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.feature-list li {
-  font-size: 1.1em;
-  margin-bottom: 0.75em;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6em;
-  line-height: 1.5;
-}
-.feature-list li i {
-  color: #2e5939;
-  font-size: 1.3em;
-  margin-top: 2px;
-}
-
-/* ============================
-   TECHNOLOGIES USED (UPDATED)
-   Matches your screenshot with cards and badges
-============================ */
-.technologies-used h2 {
-  color: #2e5939;
-  font-size: 1.8em;
-  border-bottom: 2px solid #94d2bd;
-  padding-bottom: 0.4em;
-  margin-bottom: 1.5em;
-}
-
-/* Flex layout for tech cards */
-.tech-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  justify-content: flex-start;
-}
-
-/* Individual tech card */
-.tech-card {
-  flex: 1 1 220px;
-  border: 2px solid #2e5939;
-  border-radius: 10px;
-  padding: 1em;
-  min-width: 220px;
-  background: #fff;
-  box-shadow: 0 0 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.tech-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-.tech-card h3 {
-  color: #2e5939;
-  font-size: 1.1em;
-  margin-bottom: 0.8em;
-  font-weight: bold;
-}
-
-/* Tech badges */
-.tech-badge {
-  display: inline-block;
-  background-color: #2e5939;
-  color: #fff;
-  padding: 0.35em 0.8em;
-  border-radius: 20px;
-  margin: 0.3em;
-  font-size: 0.9em;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.tech-badge:hover {
-  background-color: #1b3e28;
-  transform: scale(1.05);
+@media print {
+  header,
+  footer,
+  nav,
+  .button,
+  .dropdown-content,
+  .dark-mode-toggle {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  main section {
+    box-shadow: none;
+    border: none;
+    page-break-inside: avoid;
+  }
+  .hero {
+    background: none;
+  }
 }
 
 /* ============================
    ANIMATIONS
+   Fade effects for smooth entrance transitions
 ============================ */
 @keyframes fadeInUp {
   from {
@@ -336,6 +333,7 @@ footer a:hover {
     transform: translateY(0);
   }
 }
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -348,29 +346,116 @@ footer a:hover {
 }
 
 /* ============================
+   ABOUT PAGE STYLES
+   Styles for profile image and about section layout
+============================ */
+.profile-pic {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
    RESPONSIVE DESIGN
+   Mobile-friendly adjustments
 ============================ */
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: 0.5em;
   }
+
   .hero h1 {
     font-size: 1.8em;
   }
+
   .hero p {
     font-size: 1em;
   }
+
   .skills-grid {
     flex-direction: column;
     gap: 1em;
   }
+
   .tech-grid {
     flex-direction: column;
   }
-  .profile-pic {
-    float: none;
-    display: block;
-    margin: 0 auto 1em;
-  }
+
+}
+
+/* ============================
+   TECHNOLOGIES USED SECTION
+   Styled grid layout with pill badges
+============================ */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: space-between;
+}
+
+.tech-card {
+  border: 2px solid #2e5939;
+  border-radius: 12px;
+  padding: 1em 1.5em;
+  flex: 1 1 250px;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+.tech-card h3 {
+  color: #2e5939;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.tech-badge {
+  display: inline-block;
+  background-color: #2e5939;
+  color: #fff;
+  padding: 0.4em 1em;
+  border-radius: 999px;
+  font-size: 0.9em;
+  margin: 0.3em 0.3em 0 0;
+  white-space: nowrap;
+}
+
+/* For full-width rows like "Security" */
+.tech-card.span-3 {
+  flex: 1 1 100%;
+}
+
+/* Dark Mode overrides */
+body.dark-mode .tech-card {
+  border-color: #cccccc;
+}
+
+body.dark-mode .tech-badge {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+/* ============================
+   TECH SKILL CARD ANIMATIONS
+============================ */
+.tech-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tech-badge {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tech-badge:hover {
+  transform: scale(1.1);
+  background-color: #1b3e28;
 }
