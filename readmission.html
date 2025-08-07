@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project 3 | Hospital Readmission Risk</title>
+  <title>Hospital Readmission Risk | Portfolio</title>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header section containing navigation menu -->
+  <!-- === Navigation Header === -->
   <header>
     <nav>
-      <!-- Basic page links -->
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
 
-      <!-- Dropdown for navigating between multiple project pages -->
+      <!-- Dropdown for Projects -->
       <div class="dropdown">
         <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -29,64 +29,78 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- === Main Content === -->
   <main>
-    <!-- HERO section -->
-    <section class="hero" data-aos="fade-down">
-      <h1>Predicting 30‑Day Readmission Risk</h1>
-      <p>Supporting proactive discharge planning with interpretable machine learning.</p>
+
+    <!-- === Project Introduction === -->
+    <section>
+      <h1>Predicting 30-Day Hospital Readmission Risk</h1>
+      <p><strong>Team Project | DSC450</strong></p>
+      <p>This project explores how machine learning can support hospital discharge planning by predicting 30-day readmission risk. We used a synthetic dataset to develop an interpretable model that flags patients likely to return, helping care teams proactively intervene.</p>
     </section>
 
-    <!-- INTRO / PROJECT OVERVIEW -->
-    <section data-aos="fade-right">
-      <h2>Project Overview</h2>
-      <p>
-        This project uses a Kaggle synthetic patient dataset to predict 30‑day hospital readmission risk based on demographic, diagnostic, and hospitalization variables.
-        We start with exploratory data analysis (EDA) to uncover key drivers of readmission, followed by data cleaning and feature engineering to enrich the dataset.
-        A classification model is then trained, and predictions are visualized to improve interpretability for clinical stakeholders.
-        <strong>The goal is to demonstrate a practical, interpretable ML pipeline for proactive discharge planning and targeted intervention.</strong>
-      </p>
-    </section>
-
-    <!-- METHODS SECTION -->
-    <section data-aos="fade-left">
-      <h2>Planned Methods</h2>
-      <ul>
-        <li>Perform exploratory data analysis (EDA) to find drivers of readmission</li>
-        <li>Clean and preprocess demographic and diagnostic variables</li>
-        <li>Engineer features to improve predictive power</li>
-        <li>Train classification models (Logistic Regression, Random Forest, etc.)</li>
-        <li>Visualize results for interpretability (feature importances, ROC curves)</li>
+    <!-- === Key Features === -->
+    <section class="key-features">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> Used synthetic EHR data simulating demographics, comorbidities, vitals, and hospital outcomes.</li>
+        <li><i class="fas fa-check-circle"></i> Applied Logistic Regression, Random Forest, and XGBoost models.</li>
+        <li><i class="fas fa-check-circle"></i> Engineered a risk score and used SHAP for explainability.</li>
+        <li><i class="fas fa-check-circle"></i> Top predictors: Length of Stay, Medication Count, Discharge Destination.</li>
       </ul>
     </section>
 
-    <!-- RESULTS SECTION (PLACEHOLDER) -->
-    <section data-aos="fade-up">
-      <h2>Results (Coming Soon)</h2>
-      <p>Model performance metrics, visualizations, and stakeholder-friendly insights will be added as development continues.</p>
+    <!-- === Technologies Used === -->
+    <section class="technologies-used">
+      <h2>Technologies Used</h2>
+      <p><strong>Python | Pandas | Scikit-learn | XGBoost | SHAP | Matplotlib | Seaborn | Jupyter Notebooks</strong></p>
     </section>
 
-    <!-- DOWNLOADABLE FILES -->
-    <section class="resume" data-aos="zoom-in">
-      <h2>Downloadables</h2>
-      <p>
-        <a href="#" target="_blank"><i class="fas fa-file-word"></i> Report (Coming Soon)</a> |
-        <a href="#" target="_blank"><i class="fas fa-file-powerpoint"></i> Presentation (Coming Soon)</a>
-      </p>
+    <!-- === Visualizations === -->
+    <section>
+      <h2>Visuals</h2>
+      <img src="sprint3/readmission_shap.png" alt="SHAP Summary Plot" style="width:100%; border-radius: 8px; margin-bottom: 1em;">
+      <img src="sprint3/readmission_risk_dist.png" alt="Risk Score Distribution" style="width:100%; border-radius: 8px;">
+      <p style="font-size: 0.9em; color: #666;">Figure: Risk score distribution and SHAP analysis highlight which features most strongly influence readmission predictions.</p>
     </section>
+
+    <!-- === Results & Takeaways === -->
+    <section>
+      <h2>Outcomes & Insights</h2>
+      <ul class="feature-list">
+        <li><i class="fas fa-chart-line"></i> Patients with a risk score above 75 were 3–4x more likely to be readmitted.</li>
+        <li><i class="fas fa-user-md"></i> SHAP improved clinical trust by showing how features influenced predictions.</li>
+        <li><i class="fas fa-robot"></i> The model supports decision-making without replacing clinical judgment.</li>
+      </ul>
+    </section>
+
+    <!-- === Ethical Considerations === -->
+    <section>
+      <h2>Recommendations & Ethics</h2>
+      <ul class="feature-list">
+        <li><i class="fas fa-hand-holding-heart"></i> Use risk scores to trigger follow-up or social work consults before discharge.</li>
+        <li><i class="fas fa-exclamation-triangle"></i> Avoid bias by carefully validating with real patient data before deployment.</li>
+        <li><i class="fas fa-user-shield"></i> Maintain transparency—care teams should understand how the model works.</li>
+      </ul>
+    </section>
+
+    <!-- === Downloadables === -->
+    <section>
+      <a href="documents/Project 3-Project Draft DSC450.docx" class="button" download>Download Report</a>
+      <a href="documents/Project 3-DSC450.pptx" class="button" download>Download Slides</a>
+    </section>
+
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- === Footer Contact Section === -->
   <footer>
     <p>
-      📫 <strong>Contact:</strong>
+      📩 <strong>Contact:</strong>
       <a href="mailto:2dre34@gmail.com"><i class="fas fa-envelope"></i> Email</a>
       <a href="https://github.com/Dre2322" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="Resume2025.pdf" target="_blank"><i class="fas fa-file"></i> Resume</a>
     </p>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
 </body>
 </html>
