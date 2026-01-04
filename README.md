@@ -44,12 +44,6 @@ Analyzed Falcon 9 launch outcomes and built interactive visual analytics + class
 - **Project Page:** `spacex.html`  
 - **Repo:** https://github.com/Dre2322/Coursera/tree/main/IBM%20Data%20Science/Course10
 
-4. **Moffat Bay Lodge Reservation System**
-   - A fully responsive, multi-page web application with reservation, login, and attractions pages.
-   - Technologies: HTML, CSS, JavaScript, JSP, Java Servlets, MySQL
-   - Dark mode support across all pages for improved accessibility.
-   - [View Page](moffatbay.html)
-
 ---
 
 ## ✨ Site Features
