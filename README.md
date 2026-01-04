@@ -81,15 +81,6 @@ git clone https://github.com/Dre2322/portfolio.git
 
 ---
 
-## 🛠️ To-Do / Next Improvements
-
-- [ ] Add screenshots/figures to `spacex.html` and `moffatbay.html` using `<figure>` + captions
-- [ ] Add an “ATS-friendly” plain-text **Resume Summary** section on `about.html`
-- [ ] Add a dedicated `projects.html` (optional) for easier navigation as your list grows
-- [ ] Add a simple contact form (Netlify Forms or Formspree)
-
----
-
 ## 🙋‍♂️ About Me
 
 I’m Andres Melendez — a builder focused on **full-stack Java web development** and **applied machine learning**. I enjoy taking projects end-to-end: planning, implementation, documentation, and delivering a polished final product.
