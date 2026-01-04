@@ -1,6 +1,5 @@
 /* ============================
    GLOBAL STYLES
-   Applies base font, colors, and spacing to the whole site
 ============================ */
 html {
   scroll-behavior: smooth;
@@ -23,7 +22,6 @@ body.dark-mode {
 
 /* ============================
    HEADER AND NAVIGATION
-   Top header with navigation and dropdown
 ============================ */
 header {
   background: #e6f4ea;
@@ -70,14 +68,7 @@ footer a:hover,
   color: #0055aa;
 }
 
-a:focus,
-.button:focus,
-.dropbtn:focus {
-  outline: 2px solid #94d2bd;
-  outline-offset: 3px;
-}
-
-/* Dropdown menu styling */
+/* Dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -150,13 +141,17 @@ body.dark-mode .dropdown-content a:hover {
 }
 
 /* ============================
-   MAIN CONTENT AREA
-   Wrapper for main content including sections
+   MAIN CONTENT
 ============================ */
 main {
   max-width: 1000px;
   margin: 2em auto;
   padding: 0 2em;
+}
+
+main p,
+main li {
+  font-size: 1.02em;
 }
 
 /* Hero banner */
@@ -208,7 +203,7 @@ body.dark-mode .hero p {
   background-color: #1b3e28;
 }
 
-/* General section styling */
+/* Section styling */
 main section {
   background: #fff;
   margin-bottom: 2em;
@@ -251,8 +246,7 @@ main li {
 }
 
 /* ============================
-   FOOTER STYLING
-   Centered, clean, dark-mode aware
+   FOOTER
 ============================ */
 footer {
   background-color: #e6f4ea;
@@ -289,7 +283,6 @@ footer a:hover {
 
 /* ============================
    PRINT STYLES
-   Optimizes layout for print view
 ============================ */
 @media print {
   header,
@@ -300,20 +293,24 @@ footer a:hover {
   .dark-mode-toggle {
     display: none !important;
   }
+
   body {
     background: #fff;
     color: #000;
   }
+
   main {
     width: 100%;
     margin: 0;
     padding: 0;
   }
+
   main section {
     box-shadow: none;
     border: none;
     page-break-inside: avoid;
   }
+
   .hero {
     background: none;
   }
@@ -321,7 +318,6 @@ footer a:hover {
 
 /* ============================
    ANIMATIONS
-   Fade effects for smooth entrance transitions
 ============================ */
 @keyframes fadeInUp {
   from {
@@ -346,8 +342,7 @@ footer a:hover {
 }
 
 /* ============================
-   ABOUT PAGE STYLES
-   Styles for profile image and about section layout
+   ABOUT PAGE
 ============================ */
 .profile-pic {
   width: 150px;
@@ -360,7 +355,6 @@ footer a:hover {
 
 /* ============================
    RESPONSIVE DESIGN
-   Mobile-friendly adjustments
 ============================ */
 @media screen and (max-width: 768px) {
   nav {
@@ -376,20 +370,17 @@ footer a:hover {
     font-size: 1em;
   }
 
-  .skills-grid {
-    flex-direction: column;
-    gap: 1em;
-  }
-
   .tech-grid {
     flex-direction: column;
   }
 
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================
    TECHNOLOGIES USED SECTION
-   Styled grid layout with pill badges
 ============================ */
 .tech-grid {
   display: flex;
@@ -405,6 +396,7 @@ footer a:hover {
   flex: 1 1 250px;
   min-width: 250px;
   box-sizing: border-box;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .tech-card h3 {
@@ -422,14 +414,13 @@ footer a:hover {
   font-size: 0.9em;
   margin: 0.3em 0.3em 0 0;
   white-space: nowrap;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* For full-width rows like "Security" */
 .tech-card.span-3 {
   flex: 1 1 100%;
 }
 
-/* Dark Mode overrides */
 body.dark-mode .tech-card {
   border-color: #cccccc;
 }
@@ -439,23 +430,159 @@ body.dark-mode .tech-badge {
   color: #f0f0f0;
 }
 
-/* ============================
-   TECH SKILL CARD ANIMATIONS
-============================ */
-.tech-card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
 .tech-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.tech-badge {
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
 .tech-badge:hover {
   transform: scale(1.1);
   background-color: #1b3e28;
+}
+
+/* ============================
+   PROJECT CARDS (INDEX + PROJECT PAGES)
+============================ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5em;
+  align-items: stretch;
+}
+
+.project-card {
+  border: 2px solid #e6f4ea;
+  border-radius: 12px;
+  padding: 1.5em;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #2e5939;
+}
+
+.project-card p {
+  margin-bottom: 1em;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .project-card {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .project-card h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .project-card p {
+  color: #cccccc;
+}
+
+/* ============================
+   DOWNLOAD / ACTION BUTTON ROWS
+============================ */
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-top: 1em;
+}
+
+.download-buttons .button {
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Embedded media */
+iframe {
+  width: 100%;
+  border: 0;
+}
+
+/* ============================
+   FEATURE LIST (CHECKMARK BULLETS)
+============================ */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75em;
+  margin-bottom: 0.9em;
+  line-height: 1.6;
+}
+
+.feature-list i {
+  margin-top: 0.25em;
+  font-size: 1.05em;
+  color: #2e5939;
+  flex: 0 0 auto;
+}
+
+body.dark-mode .feature-list i {
+  color: #94d2bd;
+}
+
+/* ============================
+   PROJECT FIGURES (Optional)
+============================ */
+.project-figure {
+  margin: 0 0 1.5em 0;
+}
+
+.project-figure img {
+  width: 100%;
+  max-width: 950px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+body.dark-mode .project-figure img {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+}
+
+.project-figure figcaption {
+  max-width: 950px;
+  margin-top: 0.6em;
+  font-size: 0.95em;
+  color: #444;
+}
+
+body.dark-mode .project-figure figcaption {
+  color: #ccc;
+}
+
+/* ============================
+   ACCESSIBILITY
+============================ */
+.button:focus-visible,
+nav a:focus-visible,
+.dropbtn:focus-visible {
+  outline: 3px solid #94d2bd;
+  outline-offset: 3px;
+}
+
+/* Optional helper class (safe to keep even if unused) */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

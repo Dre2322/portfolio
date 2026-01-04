@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for proper rendering and responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SpaceX Launch Analysis | Andres Melendez</title>
+
+  <!-- External styles and libraries -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" id="darkModeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- ==============================
+       HEADER / NAVIGATION
+  ============================== -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="moffatbay.html">Moffat Bay Lodge Website</a>
+          <a href="spacex.html">SpaceX Launch Analysis</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==============================
+       MAIN CONTENT
+  ============================== -->
+  <main>
+
+    <!-- ATS Keyword Anchor (hidden from layout but readable by screen readers / parsers) -->
+    <section class="sr-only">
+      <h2>Project Summary</h2>
+      <p>
+        Data science project analyzing SpaceX Falcon 9 launch outcomes using Python, SQL, Pandas, and NumPy.
+        Built interactive visual analytics using Folium and Plotly Dash, and trained classification models
+        with Scikit-learn to predict first-stage landing success. Includes data collection via APIs/web scraping,
+        feature engineering, model evaluation, and visualization.
+      </p>
+    </section>
+
+    <!-- Hero banner -->
+    <section class="hero" data-aos="fade-down">
+      <h1>SpaceX Launch Analysis</h1>
+      <p>End-to-end data science project analyzing Falcon 9 launches and predicting first-stage landing success.</p>
+
+      <div class="download-buttons" style="margin-top: 16px;">
+        <a href="https://github.com/Dre2322/Coursera/tree/main/IBM%20Data%20Science/Course10"
+           class="button" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View GitHub Repo
+        </a>
+      </div>
+    </section>
+
+    <!-- Project overview -->
+    <section data-aos="fade-right">
+      <h2>Project Overview</h2>
+      <p>
+        This project explores SpaceX Falcon 9 launch data to understand what factors influence successful first-stage landings.
+        I collected data from multiple sources (APIs and web scraping), cleaned and transformed it, performed exploratory data analysis,
+        built interactive visualizations (maps and dashboards), and trained classification models to predict landing outcomes.
+      </p>
+    </section>
+
+    <!-- Key highlights -->
+    <section class="key-features" data-aos="fade-up">
+      <h2>Key Highlights</h2>
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> <strong>Data Collection:</strong> Pulled Falcon 9 launch data using APIs and web scraping.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Data Wrangling:</strong> Cleaned, transformed, and engineered features for modeling.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>EDA:</strong> Explored relationships between payload mass, orbit type, launch sites, and success.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Interactive Mapping:</strong> Used Folium to visualize launch sites and outcomes.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Dashboarding:</strong> Built a Plotly Dash app for interactive analysis.</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Predictive Modeling:</strong> Trained and compared classification models to predict landing success.</li>
+      </ul>
+    </section>
+
+    <!-- Technologies used -->
+    <section class="technologies-used" data-aos="fade-up">
+      <h2>Technical Stack</h2>
+
+      <div class="tech-grid">
+        <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Data & Analysis</h3>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">SQL</span>
+        </div>
+
+        <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Visualization</h3>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">Seaborn</span>
+          <span class="tech-badge">Plotly</span>
+          <span class="tech-badge">Folium</span>
+        </div>
+
+        <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Dashboard</h3>
+          <span class="tech-badge">Plotly Dash</span>
+        </div>
+
+        <div class="tech-card span-3" data-aos="fade-up" data-aos-delay="100">
+          <h3>Machine Learning</h3>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">Logistic Regression</span>
+          <span class="tech-badge">SVM</span>
+          <span class="tech-badge">Decision Trees</span>
+          <span class="tech-badge">KNN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contributions -->
+    <section data-aos="fade-up">
+      <h2>Leadership & Contributions</h2>
+      <p>
+        I completed this project end-to-end: collecting data, cleaning and engineering features, performing EDA,
+        building interactive maps and dashboards, and training multiple machine learning models to compare performance.
+      </p>
+
+      <ul>
+        <li><strong>Collected</strong> launch records using APIs and web scraping; standardized fields for analysis-ready datasets.</li>
+        <li><strong>Performed</strong> EDA to evaluate relationships across payload mass, orbit type, launch site, and landing outcome.</li>
+        <li><strong>Built</strong> interactive Folium maps and a Plotly Dash dashboard to communicate insights and filter results.</li>
+        <li><strong>Trained</strong> and compared multiple classifiers (Logistic Regression, SVM, Decision Tree, KNN) using Scikit-learn.</li>
+        <li><strong>Evaluated</strong> model performance using test splits and classification metrics, including a confusion matrix.</li>
+      </ul>
+    </section>
+
+    <!-- Results -->
+    <section data-aos="fade-up">
+      <h2>Results</h2>
+      <p>
+        The analysis showed that variables such as payload mass, orbit type, and launch site are associated with landing outcomes.
+        I compared multiple classification models and selected a best-performing approach based on test accuracy and overall classification metrics.
+      </p>
+      <p>
+        Deliverables include cleaned datasets, visual analytics, an interactive dashboard, and a reusable predictive modeling pipeline.
+      </p>
+    </section>
+
+    <!-- Key Insights (customized to your screenshots) -->
+    <section data-aos="fade-up">
+      <h2>Key Insights</h2>
+      <ul>
+        <li>
+          <strong>Launch Site Differences:</strong> The distribution of successful launches varies by site (visualized in the success-by-site chart),
+          indicating location and operational factors matter.
+        </li>
+        <li>
+          <strong>Payload vs Outcome:</strong> The payload scatter plot shows separations between success and failure clusters,
+          suggesting payload mass influences landing outcome.
+        </li>
+        <li>
+          <strong>Model Validation:</strong> The confusion matrix demonstrates how well the classifier predicts landings vs non-landings,
+          providing interpretable performance evidence beyond accuracy alone.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Visual Highlights (your actual screenshots) -->
+    <section data-aos="fade-up">
+      <h2>Visual Highlights</h2>
+
+      <figure class="project-figure">
+        <img
+          src="images/spacex/SpaceX.png"
+          alt="SpaceX visual analytics including launch site map markers, successful launches by site chart, and payload versus outcome plot"
+          loading="lazy"
+        />
+        <figcaption>
+          Visual analytics: launch site map outcomes, successful launches by site, and payload vs outcome exploration.
+        </figcaption>
+      </figure>
+
+      <figure class="project-figure">
+        <img
+          src="images/spacex/spacex-matrix.png"
+          alt="Confusion matrix evaluating classifier predictions for landing versus did not land"
+          loading="lazy"
+        />
+        <figcaption>
+          Confusion matrix used to evaluate classification model performance for predicting landing success.
+        </figcaption>
+      </figure>
+
+      <p>
+        Visual artifacts include interactive mapping concepts (Folium), dashboard-style charts, and model evaluation outputs
+        (confusion matrix) used to validate classifier performance.
+      </p>
+    </section>
+
+    <!-- Links -->
+    <section class="resume" data-aos="zoom-in">
+      <h2>Links</h2>
+      <div class="download-buttons">
+        <a href="https://github.com/Dre2322/Coursera/tree/main/IBM%20Data%20Science/Course10"
+           class="button" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub Repository
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer">
+    <p><strong>📩 Contact:</strong></p>
+    <div class="footer-links">
+      <a href="mailto:2dre34@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://github.com/Dre2322" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <!-- AOS animation library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="darkmode-toggle.js" defer></script>
+
+</body>
+</html>

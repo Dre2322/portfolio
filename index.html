@@ -24,15 +24,14 @@
   <!-- Header & Navigation -->
   <header>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
+
       <div class="dropdown">
         <button class="dropbtn">Projects <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
-          <a href="climate.html">Climate Trends Analysis</a>
-          <a href="sentiment.html">IMDb Sentiment Analysis</a>
-          <a href="readmission.html">Hospital Readmission Risk</a>
           <a href="moffatbay.html">Moffat Bay Lodge Website</a>
+          <a href="spacex.html">SpaceX Launch Analysis</a>
         </div>
       </div>
     </nav>
@@ -40,37 +39,57 @@
 
   <!-- Main Content -->
   <main>
+
+    <!-- ATS Keyword Anchor (screen-reader friendly) -->
+    <section class="sr-only">
+      <h2>Professional Summary</h2>
+      <p>
+        Data Science and Software Development student and Full-Stack Java Developer with experience building
+        Java web applications using Java Servlets, JavaServer Pages (JSP), MySQL, and MVC architecture.
+        Skilled in Python, SQL, data analysis, feature engineering, dashboards (Plotly Dash), mapping (Folium),
+        and machine learning classification models.
+      </p>
+    </section>
+
     <!-- Hero Banner -->
     <section class="hero" data-aos="fade-down">
       <h1>Hi, I'm Andres Melendez</h1>
-      <p>Data Science & Software Development Student | Builder of Practical, People-Centered Solutions</p>
+      <p>Data Science & Software Development Student | Full-Stack Java Developer | Applied Machine Learning</p>
+
+      <!-- Optional recruiter-friendly line -->
+      <p style="margin-top: 0.75em;">
+        Open to entry-level roles in <strong>Full-Stack Java Development</strong>, <strong>Data Engineering</strong>, or <strong>Applied Data Science</strong>.
+      </p>
+
       <a href="about.html" class="button">Learn More About Me</a>
     </section>
 
     <!-- Projects Preview -->
     <section class="projects-preview" data-aos="fade-up">
       <h2>Featured Projects</h2>
+
       <div class="project-grid">
-        <div class="project-card">
-          <h3>🌍 Climate Trends Analysis</h3>
-          <p>Long-term analysis of global temperature, CO₂, and sea level patterns using NASA Earth data.</p>
-          <a href="climate.html" class="button">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>🎬 IMDb Sentiment Analysis</h3>
-          <p>Classifies IMDb movie reviews as positive or negative using NLP and machine learning models.</p>
-          <a href="sentiment.html" class="button">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>🏥 Hospital Readmission Risk</h3>
-          <p>ML model predicts 30-day readmission using synthetic patient data and engineered risk scores.</p>
-          <a href="readmission.html" class="button">View Project</a>
-        </div>
+
+        <!-- Moffat Bay -->
         <div class="project-card">
           <h3>🏕️ Moffat Bay Lodge Website</h3>
-          <p>Full-stack web app with login, registration, and reservation system built with Java, MySQL, and JSP.</p>
+          <p>
+            Full-stack web application with user registration, login, and a room reservation system
+            built using Java, JavaServer Pages (JSP), Java Servlets, and MySQL.
+          </p>
           <a href="moffatbay.html" class="button">View Project</a>
         </div>
+
+        <!-- SpaceX -->
+        <div class="project-card">
+          <h3>🚀 SpaceX Launch Analysis</h3>
+          <p>
+            Data science project analyzing Falcon 9 launch outcomes using APIs, SQL, Folium maps,
+            Plotly Dash dashboards, and classification models to predict landing success.
+          </p>
+          <a href="spacex.html" class="button">View Project</a>
+        </div>
+
       </div>
     </section>
   </main>
@@ -82,18 +101,17 @@
       <a href="mailto:2dre34@gmail.com" aria-label="Email">
         <i class="fas fa-envelope"></i> Email
       </a>
-      <a href="https://github.com/Dre2322" target="_blank" aria-label="GitHub">
+      <a href="https://github.com/Dre2322" target="_blank" rel="noopener" aria-label="GitHub">
         <i class="fab fa-github"></i> GitHub
       </a>
-      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/andres-melendez-8016461a2/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i> LinkedIn
       </a>
-      <a href="Resume2025.pdf" target="_blank" aria-label="Resume">
+      <a href="Resume2025.pdf" target="_blank" rel="noopener" aria-label="Resume">
         <i class="fas fa-file"></i> Resume
       </a>
     </div>
   </footer>
-
 
   <!-- AOS animation library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

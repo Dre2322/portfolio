@@ -1,88 +1,99 @@
-# Andres Melendez – Portfolio Website
+# Andres Melendez — Portfolio Website
 
-Welcome to my personal portfolio website! This project showcases my work as a Data Science and Software Development student, including detailed writeups, interactive project pages, and technical skills.
+Welcome to my personal portfolio website! This site highlights my work as a **Data Science & Software Development student**, featuring project writeups, technical skills, and dedicated project pages.
 
 ## 🌐 Live Website
 
-**[View Portfolio](https://dre2322.github.io/portfolio)**
+**View Portfolio:** https://dre2322.github.io/portfolio
 
 ---
 
-## 📁 File Structure
+## 📁 Current File Structure
+
 
 ```
 📦 root/
-├── index.html              # Landing page
-├── about.html              # About me & skills
-├── climate.html            # Project 1: Climate Trends
-├── sentiment.html          # Project 2: Movie Sentiment Analysis
-├── readmission.html        # Project 3: Hospital Readmission
-├── style.css               # Global styles
-├── /image                  # Images including profile picture
-├── /sprint1                # Project assets (PPT, report files)
-└── Resume2025.pdf          # Downloadable resume
-```
+├── index.html # Landing page (Featured Projects)
+├── about.html # About + skills + resume link
+├── moffatbay.html # Project: Moffat Bay Lodge Website (Full-stack Java/JSP)
+├── spacex.html # Project: SpaceX Launch Analysis (Data Science + ML)
+├── style.css # Global styles (dark mode + responsive)
+├── darkmode-toggle.js # Dark mode toggle script
+├── README.md # Project documentation
+├── Resume2025.pdf # Downloadable resume
+└── /images # Images (profile photo, project images)```
 
 ---
 
-## 📌 Featured Projects
+## ⭐ Featured Projects
 
-1. **Climate Trends Analysis**
-   - Dataset: NASA EarthData (CO₂, Temperature, Sea Level)
-   - Tools: Pandas, Seaborn, Regression Models
-   - [View Page](climate.html)
+### 1) Moffat Bay Lodge Website (Team Project — Team Lead)
+A full-stack reservation website for a fictional resort with authentication and MySQL-backed reservations using Java on Tomcat.
 
-2. **Movie Review Sentiment**
-   - Dataset: IMDB 50k Review Dataset
-   - Tools: NLP, Scikit-learn, Classification Models
-   - [View Page](sentiment.html)
+- **Tech:** Java, JSP, Servlets, Tomcat, MySQL, HTML/CSS/JS  
+- **Highlights:** Registration/login with validation, reservation creation, reservation lookup, session management  
+- **Project Page:** `moffatbay.html`  
+- **Repo:** https://github.com/Dre2322/Moffat-Bay
 
-3. **Hospital Readmission Risk**
-   - Dataset: Synthetic Patient Records
-   - Tools: Machine Learning, Logistic Regression
-   - [View Page](readmission.html)
+### 2) SpaceX Launch Analysis (End-to-End Data Science)
+Analyzed Falcon 9 launch outcomes and built interactive visual analytics + classification models to predict first-stage landing success.
 
----
-
-## ✨ Features
-
-- Responsive design with clean UI
-- Animated skill badges and scroll transitions (via AOS)
-- Dropdown navigation menu
-- Resume download
-- Project links and GitHub repo previews
+- **Tech:** Python, Pandas, NumPy, SQL, Folium, Plotly Dash, scikit-learn  
+- **Highlights:** API + web scraping, EDA, interactive maps, dashboarding, classification modeling  
+- **Project Page:** `spacex.html`  
+- **Repo:** https://github.com/Dre2322/Coursera/tree/main/IBM%20Data%20Science/Course10
 
 ---
 
-## 🔧 Dependencies
+## ✨ Site Features
 
-- [Font Awesome](https://fontawesome.com/)
-- [Animate On Scroll (AOS)](https://michalsnik.github.io/aos/)
-
-No additional build tools are needed. This is a pure HTML/CSS/JS portfolio site.
+- Responsive layout (mobile-friendly)
+- Dark mode toggle
+- Animated scroll transitions (AOS)
+- Dropdown navigation for project pages
+- Resume download link
+- Clean project pages with sections for overview, tools, role, and results
 
 ---
 
-## 🛠️ To-Do & Future Features
+## 🔧 Dependencies (CDN)
 
-- [ ] Add contact form integration
-- [ ] Include screenshots or interactive previews of each project
-- [ ] Deploy backend for form submission (e.g., Netlify Functions)
-- [ ] Add blog or update feed
+- Font Awesome (icons)
+- Animate On Scroll (AOS)
+
+No build tools required — this is a static HTML/CSS/JS site hosted with GitHub Pages.
+
+---
+
+## 🧩 Local Setup
+
+1. Clone the repo:
+git clone https://github.com/Dre2322/portfolio.git
+
+2. Open `index.html` in your browser  
+
+---
+
+## 🛠️ To-Do / Next Improvements
+
+- [ ] Add screenshots/figures to `spacex.html` and `moffatbay.html` using `<figure>` + captions
+- [ ] Add an “ATS-friendly” plain-text **Resume Summary** section on `about.html`
+- [ ] Add a dedicated `projects.html` (optional) for easier navigation as your list grows
+- [ ] Add a simple contact form (Netlify Forms or Formspree)
 
 ---
 
 ## 🙋‍♂️ About Me
 
-I'm Andres Melendez — a hands-on learner and builder transitioning from logistics and retail into full-time tech. This site highlights what I can do, what I've learned, and where I'm going.
+I’m Andres Melendez — a builder focused on **full-stack Java web development** and **applied machine learning**. I enjoy taking projects end-to-end: planning, implementation, documentation, and delivering a polished final product.
 
 ---
 
 ## 📬 Contact
 
-📧 Email: [2dre34@gmail.com](mailto:2dre34@gmail.com)  
-💼 GitHub: [github.com/Dre2322](https://github.com/Dre2322)  
-🔗 LinkedIn: *Coming Soon*
+📧 Email: 2dre34@gmail.com  
+💼 GitHub: https://github.com/Dre2322  
+🔗 LinkedIn: https://www.linkedin.com/in/andres-melendez-8016461a2/
 
 ---
 
