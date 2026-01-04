@@ -21,7 +21,8 @@ Welcome to my personal portfolio website! This site highlights my work as a **Da
 ├── darkmode-toggle.js # Dark mode toggle script
 ├── README.md # Project documentation
 ├── Resume2025.pdf # Downloadable resume
-└── /images # Images (profile photo, project images)```
+└── /images # Images (profile photo, project images)
+```
 
 ---
 
