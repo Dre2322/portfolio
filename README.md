@@ -72,15 +72,6 @@ No build tools required — this is a static HTML/CSS/JS site hosted with GitHub
 
 ---
 
-## 🧩 Local Setup
-
-1. Clone the repo:
-git clone https://github.com/Dre2322/portfolio.git
-
-2. Open `index.html` in your browser  
-
----
-
 ## 🙋‍♂️ About Me
 
 I’m Andres Melendez — a builder focused on **full-stack Java web development** and **applied machine learning**. I enjoy taking projects end-to-end: planning, implementation, documentation, and delivering a polished final product.
